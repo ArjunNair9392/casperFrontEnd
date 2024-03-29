@@ -1,3 +1,40 @@
+/* globals.css */
+
+/* Webkit (Chrome, Safari, etc.) */
+.chat-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as needed */
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the background color of the scrollbar track */
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #6b7280; /* Set the background color of the scrollbar thumb */
+    border-radius: 4px; /* Add rounded corners to the scrollbar thumb */
+}
+
+/* Firefox */
+.chat-scrollbar {
+    scrollbar-width: thin; /* Adjust the width as needed */
+    scrollbar-color: #6b7280 transparent; /* Set the colors of the scrollbar thumb and track */
+}
+
+/* Rest of your styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600 disabled:bg-emerald-300;
+  }
+
+  .side-menu-item {
+    @apply m-2 flex items-center gap-4 rounded-md p-2 hover:bg-gray-800;
+  }
+
+  .prose {
+    @apply text-sm font-normal; /* Adjust font size here */
+  }
+}
