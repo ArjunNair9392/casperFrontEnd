@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         return;
         }
           
-          // validate content data
+        // validate content data
         if (
             !content ||
             typeof content !== "string" ||

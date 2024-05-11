@@ -23,7 +23,7 @@ export default async function handler(req) {
         const initialChatMessage = {
             role: "system",
             content:
-              "Your name is Casper. An incredibly intelligent and quick-thinking AI, that always replies with an enthusiastic and positive energy. Your response must be formatted as markdown. Only respond based on the context I give you and nothing outside that context. Also there can be history associated with it so please use that.",
+              "Your name is Casper. An incredibly intelligent, knowledgeable and quick-thinking AI, that always replies with professionalism. Your response must be formatted as markdown. Only respond based on the context I give you and nothing outside that context. Also there can be history associated with it so please use that.",
         };
 
         let newChatId;
@@ -77,7 +77,8 @@ export default async function handler(req) {
 
         messagesToInclude.reverse();
 
-        const responseFromNewEndpoint = await fetch("https://chatservice-juzqocjfea-uw.a.run.app/chat", {
+        const responseFromNewEndpoint = await fetch("https://chatservice-juzqocjfea-uc.a.run.app/chat", {
+        // const responseFromNewEndpoint = await fetch("http://192.168.1.69:8080/chat", {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
